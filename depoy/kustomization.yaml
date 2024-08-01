@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: realworld
+
+images:
+- name: realworld
+  newName: ghcr.io/ju-believer/realworld
+  newTag: sha-b82d5a0
+
+# uncomment after getting SSO annotations in there
+resources:
+- deployment.yaml
+- namespace.yaml
+- service.yaml
