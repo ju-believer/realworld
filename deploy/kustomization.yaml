@@ -4,8 +4,8 @@ namespace: realworld
 
 images:
 - name: realworld
-  newName: ghcr.io/ju-believer/realworld
-  newTag: sha-b82d5a0
+  newName: /realworld
+  newTag: sha-3888241
 
 # uncomment after getting SSO annotations in there
 resources:
