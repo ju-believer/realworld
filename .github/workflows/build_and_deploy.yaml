@@ -36,7 +36,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: ${{ github.event_name != 'pull_request' }}
-          target: realworld
           tags: |
             ghcr.io/ju-believer/realworld:latest
             ghcr.io/ju-believer/realworld:0.1.0  
