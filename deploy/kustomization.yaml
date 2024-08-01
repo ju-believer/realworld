@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: default
 
 images:
-- name: realworld
+- name: ghcr.io/ju-believer/realworld
   newName: /realworld
   newTag: sha-4fb54b6
 

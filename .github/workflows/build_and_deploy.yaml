@@ -57,7 +57,7 @@ jobs:
           git config user.name "RealworldApp GitHub Bot"
           git config user.email "<>"
           cd deploy
-          kustomize edit set image "realworld=${{ steps.realworld-meta.outputs.tags }}"
+          kustomize edit set image "realworld=ghcr.io/ju-believer${{ steps.realworld-meta.outputs.tags }}"
           git add kustomization.yaml
           git commit -m "automated: update docker images" 
           git checkout -b bot/update-docker
