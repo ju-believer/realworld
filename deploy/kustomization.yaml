@@ -7,7 +7,7 @@ images:
   newName: /realworld
   newTag: sha-4fb54b6
 
-# uncomment after getting SSO annotations in there
+# uncomment after getting SSO annotations in there 
 resources:
 - deployment.yaml
 - namespace.yaml
