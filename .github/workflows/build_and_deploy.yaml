@@ -40,19 +40,19 @@ jobs:
             ghcr.io/ju-believer/realworld:latest
             ghcr.io/ju-believer/realworld:0.1.0  
             ghcr.io/ju-believer${{ steps.realworld-meta.outputs.tags }}
-      # - name: update kustomize with image 
-      #   run: |
-      #     git config user.name "Ubikipedia GitHub Bot"
-      #     git config user.email "<>"
-      #     cd deploy
-      #     kustomize edit set image "realworld=${{ steps.realworld-meta.outputs.tags }}"
-      #     git add kustomization.yaml
-      #     git commit -m "automated: update docker images" 
-      #     git checkout -b bot/update-docker
-      #     git push origin bot/update-docker
+      - name: update kustomize with image 
+        run: |
+          git config user.name "Ubikipedia GitHub Bot"
+          git config user.email "<>"
+          cd deploy
+          kustomize edit set image "realworld=${{ steps.realworld-meta.outputs.tags }}"
+          git add kustomization.yaml
+          git commit -m "automated: update docker images" 
+          git checkout -b bot/update-docker
+          git push origin bot/update-docker
 
-      # - name: Open PR
-      #   run: |
-      #     gh pr create -H "bot/update-docker" -B "main" --title "automated: update docker" -b "automated: update web to ${{ steps.web-meta.outputs.tags }} and api to ${{ steps.api-meta.outputs.tags }}"
-      #   env:
-      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      - name: Open PR
+        run: |
+          gh pr create -H "bot/update-docker" -B "main" --title "automated: update docker" -b "automated: update web to ${{ steps.web-meta.outputs.tags }} and api to ${{ steps.api-meta.outputs.tags }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
