@@ -5,7 +5,7 @@ namespace: realworld
 images:
 - name: realworld
   newName: /realworld
-  newTag: sha-3888241
+  newTag: sha-8a8b3dc
 
 # uncomment after getting SSO annotations in there
 resources:
