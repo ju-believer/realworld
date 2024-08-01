@@ -59,6 +59,6 @@ jobs:
 
       - name: Open PR
         run: |
-          gh pr create -H "bot/update-docker" -B "main" --title "automated: update docker" -b "automated: update realworld to ${{ steps.realworld-meta.outputs.tags }}"
+          gh pr create -H "bot/update-docker" -B "master" --title "automated: update docker" -b "automated: update realworld to ${{ steps.realworld-meta.outputs.tags }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
