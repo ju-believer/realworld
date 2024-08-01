@@ -2,10 +2,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: podinfo
+  name: realworld
   namespace: flux-system
 spec:
   interval: 1m0s
   ref:
     branch: master
-  url: ssh:git@github.com:ju-believer/realworld.git
+  url: ssh://git@github.com/ju-believer/realworld.git
