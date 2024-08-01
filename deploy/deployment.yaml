@@ -20,3 +20,4 @@ spec:
           image: realworld
           ports:
             - containerPort: 5173
+            
