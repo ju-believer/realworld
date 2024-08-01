@@ -20,4 +20,5 @@ spec:
           image: realworld
           ports:
             - containerPort: 5173
-            
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com
