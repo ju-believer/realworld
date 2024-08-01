@@ -40,7 +40,7 @@ jobs:
           tags: |
             ghcr.io/ju-believer/realworld:latest
             ghcr.io/ju-believer/realworld:0.1.0  
-            ${{ steps.realworld-meta.outputs.tags }}
+            ghcr.io/ju-believer${{ steps.realworld-meta.outputs.tags }}
       # - name: update kustomize with image 
       #   run: |
       #     git config user.name "Ubikipedia GitHub Bot"
