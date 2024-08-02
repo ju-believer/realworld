@@ -5,10 +5,7 @@ namespace: default
 images:
 - name: realworld
   newName: ghcr.io/ju-believer/realworld
-  newTag: sha-4fb54b6
-- name: realworld
-  newName: ghcr.io/ju-believer/realworld
-  newTag: sha-618d1be
+  newTag: sha-d2c784d
 
 # uncomment after getting SSO annotations in there 
 resources:
