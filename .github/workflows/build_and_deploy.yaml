@@ -10,7 +10,7 @@ on:
 
 jobs:
   docker:
-    runs-on: macos-14
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: write
@@ -19,11 +19,6 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v4
-
-      - name: Setup docker (missing on MacOS)
-        if: runner.os == 'macos'
-        run: |
-          brew install docker
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
